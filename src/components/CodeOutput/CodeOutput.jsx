@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Prism from 'prismjs';
 
-// Import the dark theme
 import 'prismjs/themes/prism-dark.css';
 
 import 'prismjs/components/prism-markup'; 

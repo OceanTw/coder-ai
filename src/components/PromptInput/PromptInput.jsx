@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import './PromptInput';
+import './PromptInput.css';
 
 const PromptInput = ({ prompt, onPromptChange, onGenerate, isLoading, disabled }) => {
   const [isFocused, setIsFocused] = useState(false);

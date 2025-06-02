@@ -18,7 +18,7 @@ const Header = () => {
             whileTap={{ scale: 0.95 }}
           >
             <span className="logo-icon">⚡</span>
-            <span className="logo-text">AI Code Generator</span>
+            <span className="logo-text">Coder.AI</span>
           </motion.div>
           
           <nav className="nav">

@@ -6,13 +6,11 @@ const ModelSelector = ({ selectedModel, onModelSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Load models from config.json
     fetch('/config.json')
       .then(res => res.json())
       .then(data => setModels(data.models))
       .catch(err => {
         console.error('Failed to load models:', err);
-        // Fallback to mock models if config.json fails
         setModels([
           {
             id: "gpt-4",
@@ -45,7 +43,6 @@ const ModelSelector = ({ selectedModel, onModelSelect }) => {
     setIsOpen(!isOpen);
   };
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       const dropdown = document.querySelector('.dropdown-container');
