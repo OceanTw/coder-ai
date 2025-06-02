@@ -1,0 +1,47 @@
+{
+  "models": [
+    {
+      "id": "claude-sonnet-4",
+      "name": "Claude Sonnet 4",
+      "type": "claude",
+      "model-name": "claude-3-5-sonnet-20241022"
+    },
+    {
+      "id": "claude-haiku-3",
+      "name": "Claude Haiku 3",
+      "type": "claude",
+      "model-name": "claude-3-haiku-20240307"
+    },
+    {
+      "id": "gpt-4-turbo",
+      "name": "GPT-4 Turbo",
+      "type": "openai",
+      "model-name": "gpt-4-turbo-preview"
+    },
+    {
+      "id": "gpt-4o",
+      "name": "GPT-4o",
+      "type": "openai",
+      "model-name": "gpt-4o"
+    },
+    {
+      "id": "gpt-3.5-turbo",
+      "name": "GPT-3.5 Turbo",
+      "type": "openai",
+      "model-name": "gpt-3.5-turbo"
+    },
+    {
+      "id": "gemini-pro",
+      "name": "Gemini Pro",
+      "type": "gemini",
+      "model-name": "gemini-pro"
+    },
+    {
+      "id": "gemini-pro-vision",
+      "name": "Gemini Pro Vision",
+      "type": "gemini",
+      "model-name": "gemini-pro-vision"
+    }
+  ],
+  "systemPrompt": "You are an expert code generator. Generate complete, functional code based on user prompts. Return your response in the following JSON format: { \"files\": [{ \"path\": \"relative/file/path\", \"content\": \"file content\", \"language\": \"programming language\" }], \"description\": \"brief description of the generated code\", \"mainFile\": \"path to main executable file\", \"buildInstructions\": \"compilation/build instructions\" }. Ensure all code is production-ready, well-structured, and follows best practices. For web applications, include HTML, CSS, and JavaScript. For desktop applications, use appropriate frameworks. Always include a README.md file with setup instructions."
+}

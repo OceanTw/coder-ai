@@ -1,0 +1,243 @@
+.download-manager {
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.download-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.download-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-text);
+}
+
+.project-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.project-language {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary-text);
+  text-transform: uppercase;
+}
+
+.file-count {
+  font-size: 12px;
+  color: var(--accent-text);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.download-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.download-btn {
+  background: var(--tertiary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.download-btn:hover:not(:disabled) {
+  border-color: var(--secondary-text);
+  background: var(--hover-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.download-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.source-btn:hover:not(:disabled) {
+  border-color: #4CAF50;
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.2);
+}
+
+.compile-btn:hover:not(:disabled) {
+  border-color: #FF9800;
+  box-shadow: 0 5px 15px rgba(255, 152, 0, 0.2);
+}
+
+.btn-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.btn-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.btn-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary-text);
+  margin-bottom: 4px;
+}
+
+.btn-subtitle {
+  font-size: 12px;
+  color: var(--accent-text);
+}
+
+.compile-spinner {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid transparent;
+  border-top: 2px solid var(--primary-text);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.compilation-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.compilation-status.success {
+  background: rgba(76, 175, 80, 0.1);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  color: #4CAF50;
+}
+
+.compilation-status.error {
+  background: rgba(244, 67, 54, 0.1);
+  border: 1px solid rgba(244, 67, 54, 0.3);
+  color: #F44336;
+}
+
+.status-icon {
+  font-size: 16px;
+}
+
+.status-message {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.download-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.info-section {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.info-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-text);
+  margin-bottom: 15px;
+}
+
+.info-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.info-list li {
+  font-size: 13px;
+  color: var(--secondary-text);
+  margin-bottom: 8px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.info-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent-text);
+}
+
+.info-list li:last-child {
+  margin-bottom: 0;
+}
+
+.compile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-label {
+  font-size: 13px;
+  color: var(--accent-text);
+}
+
+.detail-value {
+  font-size: 13px;
+  color: var(--secondary-text);
+  font-family: var(--font-mono);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .download-actions {
+    grid-template-columns: 1fr;
+  }
+  
+  .download-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .download-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .project-info {
+    justify-content: center;
+  }
+}
