@@ -1,19 +1,20 @@
 {
   "name": "coder-ai",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "archiver": "^6.0.1",
+    "axios": "^1.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "file-saver": "^2.0.5",
+    "framer-motion": "^10.16.0",
+    "jszip": "^3.10.1",
+    "multer": "2.0.0",
+    "prismjs": "^1.30.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "axios": "^1.6.0",
-    "file-saver": "^2.0.5",
-    "jszip": "^3.10.1",
-    "prismjs": "^1.29.0",
-    "express": "^4.18.2",
-    "cors": "^2.8.5",
-    "archiver": "^6.0.1",
-    "uuid": "^9.0.1"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,13 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server": "node server/server.js",
-    "dev": "concurrently \"npm run server\" \"npm start\"",
-    "dev:server": "nodemon server/server.js",
-    "vercel-build": "npm run build"
-  },
-  "devDependencies": {
-    "concurrently": "^8.2.2",
-    "nodemon": "^3.0.1"
+    "dev": "concurrently \"npm run server\" \"npm start\""
   },
   "eslintConfig": {
     "extends": [
@@ -46,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
   }
 }
